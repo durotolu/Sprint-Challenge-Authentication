@@ -8,11 +8,11 @@ module.exports = {
 };
 
 function find() {
-  return db('users').select('id', 'username', 'password', 'department');
+  return db('users').select('id', 'username', 'password');
 }
 
-function findBy(department) {
-  return db('users').where({department});
+function findBy(username) {
+  return db('users').where({ username }).first();
 }
 
 async function add(user) {

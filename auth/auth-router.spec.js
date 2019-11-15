@@ -30,4 +30,17 @@ describe('router', () => {
         })
     })
 
+    describe('POST / login', () => {
+        test('result contains json format', () => {
+            request(router)
+                .post('/login')
+                .expect('Content-Type', /json/)
+        })
+
+        it('token is sent back', () => {
+            request(router)
+                .post('/login')
+                .expect(200, /token/)
+        })
+    })
 })

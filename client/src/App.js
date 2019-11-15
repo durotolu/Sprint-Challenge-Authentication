@@ -5,7 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import SignUp from './SignUp';
-//import Jokes from './Jokes';
+import Jokes from './Jokes';
 import SignIn from './SignIn';
 
 const initialForm = {
@@ -21,7 +21,7 @@ function App() {
         <Route exact path='/' render={() => <Redirect to ='/register'/>} />
         <Route exact path='/register' render={(props) => <SignUp {...props} />} />
         <Route exact path='/login' render={(props) => <SignIn {...props} />} />
-        {/* <Route exact path='/jokes' render={() => <Jokes />} /> */}
+        <Route exact path='/jokes' render={() => <Jokes />} />
       </header>
     </div>
   );

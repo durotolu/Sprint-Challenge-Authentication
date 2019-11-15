@@ -30,7 +30,7 @@ function SignUp(props) {
       .then(res => {
         console.log(res);
         localStorage.setItem('token', res.data.token)
-        props.history.push('/user')
+        props.history.push('/jokes')
       })
       .catch(err => {
         alert(err.message)
